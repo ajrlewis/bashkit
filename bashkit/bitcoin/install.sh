@@ -58,7 +58,6 @@ apt-get install -y build-essential libtool autotools-dev automake pkg-config lib
 
 # Configure the build process
 echo "Configuring build process..."
-make clean
 ./autogen.sh && ./configure --prefix="$install_dir" --enable-wallet --enable-cxx
 
 # Build and install Bitcoin
