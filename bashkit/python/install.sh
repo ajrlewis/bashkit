@@ -18,5 +18,6 @@ cd Python-$version
 make && make install
 
 # Cleanup
-cd ../..
-rm -rf tmp
+cd ../
+rm -rf Python-$version
+rm -rf Python-$version.tgz
