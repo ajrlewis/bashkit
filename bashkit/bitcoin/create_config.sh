@@ -12,11 +12,10 @@ fi
 # Use Tor for network connections
 proxy=127.0.0.1:9050
 
-# Choose a random rpcuser value from the list
-# List of well-known bitcoin people for rpcuser values
-# Generate a random rpcpassword value
+# Choose a random rpcuser value from the list of well-known bitcoin people
 people=("nakamoto" "szabo" "ver" "andresen" "garzik" "antonopoulos" "song" "wong" "rogerkver" "charlielee")
 rpcuser=${people[$RANDOM % ${#people[@]}]}
+# Generate a random rpcpassword value
 rpcpassword=$(openssl rand -hex 32)
 
 # Define the rpcport and listen address
@@ -24,7 +23,7 @@ rpcport=8332
 listen_address="127.0.0.1"
 
 # Use external hard drive to store blockchain.
-data_dir=$(bash /path/to/script.sh)
+data_dir=/media/$USER/bitcoin
 
 # Set the maximum number of inbound and outbound connections
 max_connections=125
