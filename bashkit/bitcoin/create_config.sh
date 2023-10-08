@@ -1,5 +1,7 @@
 #!/bin/bash
 
+mkdir "$HOME/.bitcoin"
+
 # Define the location and name of the bitcoin configuration file
 bitcoin_conf="$HOME/.bitcoin/bitcoin.conf"
 
@@ -37,4 +39,4 @@ datadir=$datadir
 EOF
 
 # Set the correct file permissions for the bitcoin configuration file  ensures that only the owner can read and modify the bitcoin configuration file.
-chmod 0600 "$bitcoin_conf"
+chmod 600 "$bitcoin_conf"
